@@ -34,12 +34,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCb-7F-ndh">
+                                <rect key="frame" x="32" y="195" width="350" height="30"/>
+                                <gestureRecognizers/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0Nk-OJ-nJl" appends="YES" id="lfN-Ex-uGs"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zUU-EZ-LdA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="28r-9y-Qjg"/>
                             <constraint firstItem="Hh1-Hj-zCs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Gq1-a8-n9R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cCb-7F-ndh" secondAttribute="trailing" constant="32" id="V3q-ne-xBS"/>
                             <constraint firstItem="zUU-EZ-LdA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="bjT-Zx-Ke2"/>
+                            <constraint firstItem="cCb-7F-ndh" firstAttribute="top" secondItem="Hh1-Hj-zCs" secondAttribute="bottom" constant="30" id="eWN-Vv-gBJ"/>
+                            <constraint firstItem="cCb-7F-ndh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="jyt-32-MgV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zUU-EZ-LdA" secondAttribute="trailing" constant="32" id="l7z-2I-BaZ"/>
                             <constraint firstItem="Hh1-Hj-zCs" firstAttribute="top" secondItem="zUU-EZ-LdA" secondAttribute="bottom" constant="20" id="nUx-Cf-RtK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hh1-Hj-zCs" secondAttribute="trailing" constant="32" id="q8Q-Ob-HQi"/>
@@ -49,12 +62,18 @@
                     <connections>
                         <outlet property="text" destination="Hh1-Hj-zCs" id="Y3I-fl-8jb"/>
                         <outlet property="textField" destination="zUU-EZ-LdA" id="HtA-yb-qPp"/>
+                        <outlet property="textField2" destination="cCb-7F-ndh" id="GL3-Uo-oEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="18T-RX-qVR">
                     <connections>
                         <action selector="handleTouchAction:" destination="BYZ-38-t0r" id="aCf-9A-fRv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0Nk-OJ-nJl">
+                    <connections>
+                        <action selector="handleTouchIconAction:" destination="BYZ-38-t0r" id="1q3-Wo-yc9"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
